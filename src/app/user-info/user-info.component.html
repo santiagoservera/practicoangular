@@ -1,0 +1,28 @@
+<p>user-info works!</p>
+
+<div>
+  <label>Nombre:</label>
+  <input type="text" [(ngModel)]="name">
+</div>
+<div>
+  <label>Edad:</label>
+  <input type="number" [(ngModel)]="age">
+</div>
+<div>
+  <label>Mejores amigos:</label>
+  <input type="text" [(ngModel)]="friends">
+</div>
+
+<div>
+  <p>Hola {{name}}</p>
+  <p>{{getAgeMessage()}}</p>
+
+</div>
+
+<div>
+    <p>Mejores amigos:</p>
+    <ul>
+      <li *ngFor="let friend of friends.split(',') let i=index">Mejor amigo n° {{i+1}}: {{friend.trim()}}</li>
+    </ul>
+  </div>
+  
